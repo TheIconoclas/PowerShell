@@ -1,0 +1,11 @@
+Get-MailboxStatistics -server cuiexchange |fl Displayname, TotalItemSize, TotalDeletedItemSize
+
+
+# Add a user to someone's Calendar
+
+add-mailboxfolderpermission -identity xxxx@cuinterface.com:\Calendar -user yyyy -AccessRights Editor
+
+
+# Who has access to someone's Calendar
+
+get-mailboxfolderpermission -identity xxxx@cuinterface.com:\Calendar
